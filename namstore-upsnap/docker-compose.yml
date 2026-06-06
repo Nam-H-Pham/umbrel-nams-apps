@@ -1,11 +1,10 @@
 version: "3.7"
 
 services:
-
   app_proxy:
     environment:
       PORT: 3000
-      APP_HOST: upsnap
+      APP_HOST: 127.0.0.1
       APP_PORT: 8090
     depends_on:
       - upsnap
@@ -13,10 +12,9 @@ services:
   upsnap:
     image: ghcr.io/seriousm4x/upsnap:5
     init: true
+    network_mode: host
     cap_add:
       - NET_RAW
-    cap_drop:
-      - ALL
     volumes:
       - ./data:/app/pb_data
     environment:
