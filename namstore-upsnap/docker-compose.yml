@@ -3,11 +3,12 @@ version: "3.7"
 services:
 
   app_proxy:
-    network_mode: host
     environment:
       PORT: 3000
-      APP_HOST: 127.0.0.1
+      APP_HOST: host.docker.internal
       APP_PORT: 8090
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       - upsnap
 
