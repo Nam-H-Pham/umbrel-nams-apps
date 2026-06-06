@@ -12,7 +12,6 @@ services:
 
   upsnap:
     image: ghcr.io/seriousm4x/upsnap:5
-    user: "1000:1000"
     init: true
     network_mode: host
     cap_add:
