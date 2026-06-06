@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: namstore-upsnap
+name: Upsnap
+tagline: Wake-on-LAN dashboard with device discovery and remote power control
+icon: https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/home-light.webp
+category: Utilities
+version: "1.0.0"
+port: 8090
+description: >-
+  Upsnap is a Wake-on-LAN web app that discovers devices on your local network,
+  allows you to ping them, and sends wake packets to boot machines remotely.
+
+developer: seriousm4x
+website: https://github.com/seriousm4x/UpSnap
+submitter: seriousm4x
+submission: https://github.com/seriousm4x/UpSnap
+repo: https://github.com/seriousm4x/UpSnap
+support: https://github.com/seriousm4x/UpSnap/issues
+gallery:
+  - https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/home-light.webp
+  - https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/new-scan-light.webp
+  - https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/settings-light.webp
+releaseNotes: >-
+  Initial Upsnap app listing for the Namstore community app store.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
