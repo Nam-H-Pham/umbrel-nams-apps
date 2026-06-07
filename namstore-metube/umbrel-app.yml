@@ -2,6 +2,7 @@ manifestVersion: 1
 id: namstore-metube
 category: media
 name: MeTube
+icon: https://raw.githubusercontent.com/alexta69/metube/master/ui/src/assets/icons/android-chrome-192x192.png
 version: "2026.06.06"
 tagline: Download videos from YouTube
 description: >-
