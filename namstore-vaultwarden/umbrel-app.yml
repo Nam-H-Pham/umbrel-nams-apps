@@ -1,0 +1,33 @@
+manifestVersion: 1
+
+id: namstore-vaultwarden
+name: Vaultwarden
+tagline: Lightweight self-hosted password manager
+icon: https://raw.githubusercontent.com/dani-garcia/vaultwarden/main/resources/vaultwarden-icon.svg
+category: Security
+version: "1.0.0"
+port: 80
+
+description: >-
+  Vaultwarden is a lightweight, self-hosted password manager compatible with
+  Bitwarden clients. Use it to store passwords, passkeys where supported by
+  clients, API keys, recovery codes, secure notes, and other sensitive
+  information on your own server.
+
+  This app is configured with public sign-ups disabled by default. Create your
+  first user after install, then keep sign-ups disabled for safer home use.
+
+developer: Vaultwarden Community
+website: https://github.com/dani-garcia/vaultwarden
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/dani-garcia/vaultwarden
+support: https://github.com/dani-garcia/vaultwarden/discussions
+gallery:
+  - https://raw.githubusercontent.com/dani-garcia/vaultwarden/main/resources/vaultwarden-icon.svg
+releaseNotes: >-
+  Initial Namstore package for Vaultwarden.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
