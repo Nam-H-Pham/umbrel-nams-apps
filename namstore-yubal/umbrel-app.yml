@@ -6,9 +6,9 @@ tagline: Simple background downloader and scheduler for Yubal content
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-yubal/icon.svg
 category: Utilities
 version: "1.0.0"
-port: 8000
+port: 8473
 description: >-
-  Yubal provides a scheduled content downloader and management UI on port 8000.
+  Yubal provides a scheduled content downloader and management UI on port 8473.
 
   This Namstore package runs Yubal with persistent data and config volumes inside
   the app data directory.
