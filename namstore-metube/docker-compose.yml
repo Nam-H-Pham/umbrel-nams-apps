@@ -12,5 +12,7 @@ services:
     volumes:
       - ${UMBREL_ROOT}/home/Downloads/music:/music
     environment:
+      - PUID=1000
+      - PGID=1000
       - DELETE_FILE_ON_TRASHCAN=true
     container_name: metube_metube_1
