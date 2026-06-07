@@ -1,0 +1,29 @@
+manifestVersion: 1
+
+id: namstore-yubal
+name: Yubal
+tagline: Simple background downloader and scheduler for Yubal content
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-yubal/icon.svg
+category: Utilities
+version: "1.0.0"
+port: 8000
+description: >-
+  Yubal provides a scheduled content downloader and management UI on port 8000.
+
+  This Namstore package runs Yubal with persistent data and config volumes inside
+  the app data directory.
+
+developer: guillevc
+website: https://github.com/guillevc/yubal
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/guillevc/yubal
+support: https://github.com/guillevc/yubal/issues
+gallery: []
+releaseNotes: >-
+  Initial Namstore package for Yubal with scheduled downloads and persistent
+  configuration.
+dependencies: []
+path: ""
+defaultUsername: admin
+defaultPassword: admin

@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  yubal:
+    image: ghcr.io/guillevc/yubal:latest
+    container_name: yubal
+    ports:
+      - 8473:8000
+    environment:
+      PUID: 1000
+      PGID: 1000
+      YUBAL_SCHEDULER_CRON: "0 0 * * *"
+      YUBAL_DOWNLOAD_UGC: false
+      YUBAL_TZ: UTC
+    volumes:
+      - ${UMBREL_ROOT}/home/Downloads/music:/app/data
+      - ./config:/app/config
+    restart: unless-stopped
