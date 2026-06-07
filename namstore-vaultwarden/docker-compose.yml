@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: vaultwarden_server_1
+      APP_PORT: 80
+      PROXY_AUTH_ADD: "false"
+    container_name: vaultwarden_app_proxy_1
+
+  server:
+    image: vaultwarden/server:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      - SIGNUPS_ALLOWED=false
+      - INVITATIONS_ALLOWED=true
+      - WEBSOCKET_ENABLED=true
+      - ROCKET_PORT=80
+    container_name: vaultwarden_server_1
