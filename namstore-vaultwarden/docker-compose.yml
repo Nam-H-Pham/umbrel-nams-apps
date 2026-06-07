@@ -14,7 +14,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:
-      - SIGNUPS_ALLOWED=false
+      - SIGNUPS_ALLOWED=true
       - INVITATIONS_ALLOWED=true
       - WEBSOCKET_ENABLED=true
       - ROCKET_PORT=80
