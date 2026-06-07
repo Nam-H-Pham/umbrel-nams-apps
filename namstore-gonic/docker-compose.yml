@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-gonic_server_1
+      APP_PORT: 4747
+      PROXY_AUTH_ADD: "false"
+    container_name: namstore-gonic_app_proxy_1
+
+  server:
+    image: sentriz/gonic:latest
+    restart: on-failure
+    user: "1000:1000"
+    environment:
+      - TZ=Australia/Melbourne
+      - GONIC_LISTEN_ADDR=0.0.0.0:4747
+      - GONIC_MUSIC_PATH=/music
+      - GONIC_CACHE_PATH=/cache
+      - GONIC_DB_PATH=/data/gonic.db
+      - GONIC_PLAYLISTS_PATH=/playlists
+      - GONIC_SCAN_INTERVAL=60
+    volumes:
+      - ${UMBREL_ROOT}/home/Downloads/music:/music:ro
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/cache:/cache
+      - ${APP_DATA_DIR}/playlists:/playlists
+    container_name: namstore-gonic_server_1
