@@ -1,0 +1,33 @@
+manifestVersion: 1
+
+id: namstore-gonic
+name: Gonic
+tagline: Folder-first Subsonic music streaming server
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-gonic/icon.svg
+category: Media
+version: "1.0.0"
+port: 4747
+description: >-
+  Gonic is a lightweight Subsonic-compatible music streaming server. It is a good
+  fit if you want your existing music folder structure to remain meaningful,
+  because it supports browsing by folder while keeping your full tree intact.
+
+  This Namstore package mounts your Umbrel music downloads folder at /music,
+  stores Gonic's database and cache inside the app data directory, and exposes
+  the server on port 4747 through Umbrel.
+
+developer: sentriz
+website: https://github.com/sentriz/gonic
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/sentriz/gonic
+support: https://github.com/sentriz/gonic/issues
+gallery: []
+releaseNotes: >-
+  Initial Namstore package for Gonic with Umbrel proxy support, persistent data,
+  persistent cache, playlist storage, and /home/Downloads/music mounted as the
+  read-only music library.
+dependencies: []
+path: ""
+defaultUsername: admin
+defaultPassword: admin
