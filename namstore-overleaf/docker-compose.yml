@@ -9,10 +9,7 @@ services:
       PROXY_AUTH_ADD: "false"
 
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: namstore-overleaf-full-texlive:4.2.8
+    image: sharelatex/sharelatex:4.2.8@sha256:904776b0e0722ba4f44e5397cba33bfe9584488c74c0aa7accce96a2477b2761
     depends_on:
       mongo:
         condition: service_healthy
@@ -60,5 +57,5 @@ services:
       mongo --host mongo --eval 'rs.initiate({_id: \"overleaf\", members: [{_id: 0, host: \"mongo:27017\"}]})'"
     restart: "on-failure"
 
-# Overleaf versions above 4.x commonly require newer MongoDB versions.
-# MongoDB 5.0+ requires AVX-capable CPUs, so this app stays on Overleaf 4.2.8 + MongoDB 4.4 for older home-server compatibility.
+# This version intentionally uses a pullable image because Umbrel custom app installs do not build local Dockerfiles.
+# For complex LaTeX documents, install extra TeX Live packages inside the web container after installation.
