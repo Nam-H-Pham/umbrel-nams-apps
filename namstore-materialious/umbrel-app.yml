@@ -5,7 +5,7 @@ name: Materialious
 tagline: Modern privacy-friendly YouTube frontend
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-materialious/icon.svg
 category: Media
-version: "1.16.30"
+version: "1.16.31"
 port: 3000
 description: >-
   Materialious is a modern Material Design frontend for YouTube and Invidious,
@@ -22,8 +22,7 @@ repo: https://github.com/Materialious/Materialious
 support: https://github.com/Materialious/Materialious/issues
 gallery: []
 releaseNotes: >-
-  Initial Namstore package for Materialious using the full Docker image with
-  persistent SQLite data.
+  Fix Materialious database configuration for SQLite persistence on Umbrel.
 dependencies: []
 path: ""
 defaultUsername: ""
