@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      PORT: 3000
+      APP_HOST: namstore-materialious_server_1
+      APP_PORT: 3000
+    depends_on:
+      - server
+
+  server:
+    image: wardpearce/materialious-full:latest
+    restart: on-failure
+    environment:
+      PORT: 3000
+      # Umbrel already protects app access via its proxy, so Materialious auth is disabled by default.
+      DEFAULT_AUTH: false
+      DEFAULT_REGISTRATION: false
+      DB_TYPE: sqlite
+      SQLITE_FILE: /materialious-data/materialious.db
+    volumes:
+      - ${APP_DATA_DIR}/data:/materialious-data
+    container_name: namstore-materialious_server_1
