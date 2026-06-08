@@ -5,7 +5,7 @@ name: Yubal
 tagline: Simple background downloader and scheduler for Yubal content
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-yubal/icon.svg
 category: Utilities
-version: "1.0.0"
+version: "2.0.0"
 port: 8473
 description: >-
   Yubal provides a scheduled content downloader and management UI on port 8473.
@@ -25,5 +25,3 @@ releaseNotes: >-
   configuration.
 dependencies: []
 path: ""
-defaultUsername: admin
-defaultPassword: admin
