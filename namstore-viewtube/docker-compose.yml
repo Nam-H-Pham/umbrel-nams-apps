@@ -1,0 +1,41 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      PORT: 3000
+      APP_HOST: namstore-viewtube_server_1
+      APP_PORT: 8066
+    depends_on:
+      - server
+
+  server:
+    image: mauriceo/viewtube:latest
+    restart: on-failure
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      - PORT=8066
+      - VIEWTUBE_DATABASE_HOST=db
+      - VIEWTUBE_DATABASE_PORT=27017
+      - VIEWTUBE_REDIS_HOST=redis
+      - VIEWTUBE_REDIS_PORT=6379
+      - VIEWTUBE_ADMIN_USER=admin
+    container_name: namstore-viewtube_server_1
+
+  db:
+    image: mongo:7
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/mongo:/data/db
+    container_name: namstore-viewtube_db_1
+
+  redis:
+    image: redis:7-alpine
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/redis:/data
+    container_name: namstore-viewtube_redis_1
