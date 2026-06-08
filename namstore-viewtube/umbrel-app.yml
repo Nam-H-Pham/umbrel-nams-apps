@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: namstore-viewtube
+name: ViewTube
+tagline: Privacy-friendly YouTube frontend without ads or tracking
+icon: https://raw.githubusercontent.com/ViewTube/viewtube/development/.github/images/logo.png
+category: Media
+version: "0.17.0"
+port: 8066
+description: >-
+  ViewTube is an alternative YouTube frontend that lets you watch, search and
+  discover YouTube videos without ads or tracking. It supports playlists,
+  comments, subscriptions, SponsorBlock, dark and light themes, and a
+  mobile-friendly video player.
+
+developer: ViewTube
+website: https://viewtube.io
+submitter: Nam-H-Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/ViewTube/viewtube
+support: https://github.com/ViewTube/viewtube/issues
+gallery:
+  - https://i.ibb.co/Gk5tKQ7/lxt1y0mk.jpg
+  - https://i.ibb.co/RTL2v3f/g2ejf7wf.jpg
+  - https://i.ibb.co/h9mf1yd/6j45ao5r.jpg
+releaseNotes: >-
+  Initial ViewTube app listing for the Namstore community app store.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
