@@ -1,0 +1,30 @@
+manifestVersion: 1
+
+id: namstore-materialious
+name: Materialious
+tagline: Modern privacy-friendly YouTube frontend
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-materialious/icon.svg
+category: Media
+version: "1.16.30"
+port: 3000
+description: >-
+  Materialious is a modern Material Design frontend for YouTube and Invidious,
+  focused on a clean, privacy-friendly YouTube experience without ads or
+  tracking. It can work without an Invidious instance by using its YouTube
+  backend, and includes features such as SponsorBlock, Return YouTube Dislike,
+  DeArrow, playlists, live streams, themes, and PWA support.
+
+developer: Materialious
+website: https://materialio.us
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/Materialious/Materialious
+support: https://github.com/Materialious/Materialious/issues
+gallery: []
+releaseNotes: >-
+  Initial Namstore package for Materialious using the full Docker image with
+  persistent SQLite data.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
