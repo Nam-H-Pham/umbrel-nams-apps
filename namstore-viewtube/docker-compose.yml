@@ -10,7 +10,7 @@ services:
       - server
 
   server:
-    image: mauriceo/viewtube:latest
+    image: mauriceo/viewtube:dev
     restart: on-failure
     depends_on:
       - db
