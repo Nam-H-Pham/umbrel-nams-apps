@@ -1,25 +1,25 @@
 manifestVersion: 1
 id: namstore-8mb
 name: 8mb.local
-tagline: Compress videos to a target file size locally
-category: media
-version: "1.0.1"
-port: 3000
+tagline: Self-hosted video compressor with target-size presets
+category: Media
+version: "1.0.3"
+port: 8001
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-8mb/icon.svg
 description: >-
-  8mb.local is a simple local-first video compressor for Umbrel. Upload a video,
-  choose a target size such as 8 MB or 10 MB, and it will use FFmpeg locally to
-  create a compressed MP4.
-developer: Nam Pham
-website: https://github.com/Nam-H-Pham/umbrel-nams-apps
+  8mb.local is a self-hosted video compressor. Drop a file, choose a target size
+  such as 8 MB, 25 MB, 50 MB, or 100 MB, and compress videos locally with a
+  SvelteKit UI, FastAPI backend, Celery worker, Redis broker, and FFmpeg.
+developer: JMS1717
+website: https://github.com/JMS1717/8mb.local
 submitter: Nam Pham
 submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
-repo: https://github.com/Nam-H-Pham/umbrel-nams-apps
-support: https://github.com/Nam-H-Pham/umbrel-nams-apps/issues
+repo: https://github.com/JMS1717/8mb.local
+support: https://github.com/JMS1717/8mb.local/issues
 gallery: []
 releaseNotes: >-
-  Fix Umbrel proxy routing, remove the local Docker build requirement, and add
-  clearer handling for target sizes that are too small for the uploaded video.
+  Package the upstream JMS1717/8mb.local Docker image for Umbrel with persistent
+  upload and output directories.
 dependencies: []
 path: ""
 defaultUsername: ""
