@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: namstore-8mb
+name: 8mb.local
+tagline: Compress videos to a target file size locally
+category: media
+version: "1.0.0"
+port: 3000
+description: >-
+  8mb.local is a simple local-first video compressor for Umbrel. Upload a video,
+  choose a target size such as 8 MB or 10 MB, and it will use FFmpeg locally to
+  create a compressed MP4.
+developer: Nam Pham
+website: https://github.com/Nam-H-Pham/umbrel-nams-apps
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/Nam-H-Pham/umbrel-nams-apps
+support: https://github.com/Nam-H-Pham/umbrel-nams-apps/issues
+gallery: []
+releaseNotes: >-
+  Initial release with local upload, target-size compression, and download support.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
