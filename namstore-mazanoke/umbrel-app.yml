@@ -3,7 +3,7 @@ id: namstore-mazanoke
 name: MAZANOKE
 tagline: Local image optimizer that runs in your browser
 category: Media
-version: "1.0.0"
+version: "1.0.1"
 port: 80
 icon: https://github.com/civilblur/mazanoke/raw/main/.github/images/mazanoke-app-icon.png
 description: >-
@@ -18,7 +18,7 @@ repo: https://github.com/civilblur/mazanoke
 support: https://github.com/civilblur/mazanoke/issues
 gallery: []
 releaseNotes: >-
-  Initial Namstore package for MAZANOKE using the official GHCR Docker image.
+  Use a unique Docker service name for reliable Umbrel proxy DNS resolution.
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -1,11 +1,11 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: namstore-mazanoke_web_1
+      APP_HOST: mazanoke
       APP_PORT: 80
     depends_on:
-      - web
+      - mazanoke
 
-  web:
+  mazanoke:
     image: ghcr.io/civilblur/mazanoke:latest
     restart: unless-stopped
