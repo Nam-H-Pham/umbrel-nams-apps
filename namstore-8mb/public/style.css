@@ -27,6 +27,15 @@ body {
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
+.app-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 0 20px;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.35);
+}
+
 .eyebrow {
   margin: 0 0 8px;
   color: #93c5fd;
