@@ -1,6 +1,7 @@
 import express from "express";
 import multer from "multer";
 import ffmpeg from "fluent-ffmpeg";
+import ffmpegInstaller from "@ffmpeg-installer/ffmpeg";
 import ffprobeInstaller from "@ffprobe-installer/ffprobe";
 import fs from "fs";
 import path from "path";
@@ -17,6 +18,7 @@ const uploadDir = path.join(dataDir, "uploads");
 const outputDir = path.join(dataDir, "output");
 const maxUploadMb = Number(process.env.MAX_UPLOAD_MB || 2048);
 
+ffmpeg.setFfmpegPath(ffmpegInstaller.path);
 ffmpeg.setFfprobePath(ffprobeInstaller.path);
 
 fs.mkdirSync(uploadDir, { recursive: true });

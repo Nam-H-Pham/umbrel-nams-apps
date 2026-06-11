@@ -18,8 +18,8 @@ repo: https://github.com/Nam-H-Pham/umbrel-nams-apps
 support: https://github.com/Nam-H-Pham/umbrel-nams-apps/issues
 gallery: []
 releaseNotes: >-
-  Fix Umbrel proxy routing, Docker build setup, and clearer handling for target
-  sizes that are too small for the uploaded video.
+  Fix Umbrel proxy routing, remove the local Docker build requirement, and add
+  clearer handling for target sizes that are too small for the uploaded video.
 dependencies: []
 path: ""
 defaultUsername: ""
