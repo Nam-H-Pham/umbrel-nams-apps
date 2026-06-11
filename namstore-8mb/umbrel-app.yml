@@ -3,7 +3,7 @@ id: namstore-8mb
 name: 8mb.local
 tagline: Self-hosted video compressor with target-size presets
 category: Media
-version: "1.0.4"
+version: "1.0.5"
 port: 8001
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-8mb/icon.svg
 description: >-
@@ -18,8 +18,8 @@ repo: https://github.com/JMS1717/8mb.local
 support: https://github.com/JMS1717/8mb.local/issues
 gallery: []
 releaseNotes: >-
-  Add startup health checks so Umbrel waits until the upstream 8mb.local web UI
-  is ready before routing traffic.
+  Use the unique Umbrel container hostname for proxy routing to avoid collisions
+  with other services named web on the shared Docker network.
 dependencies: []
 path: ""
 defaultUsername: ""

@@ -1,7 +1,7 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: web
+      APP_HOST: namstore-8mb_web_1
       APP_PORT: 8001
     depends_on:
       web:
