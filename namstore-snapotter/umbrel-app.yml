@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: namstore-snapotter
+name: SnapOtter
+tagline: Offline image tools, editor, AI utilities, and batch pipelines
+category: Media
+version: "1.17.2"
+port: 1349
+icon: https://raw.githubusercontent.com/snapotter-hq/SnapOtter/main/branding/logo-512.png
+description: >-
+  SnapOtter is a self-hosted image toolkit with 50+ offline tools for resizing,
+  cropping, compressing, converting, watermarking, editing, AI-powered cleanup,
+  OCR, GIF creation, duplicate detection, reusable pipelines, and batch image
+  processing. Images stay on your own hardware.
+developer: snapotter-hq
+website: https://snapotter.com
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/snapotter-hq/SnapOtter
+support: https://github.com/snapotter-hq/SnapOtter/issues
+gallery:
+  - https://raw.githubusercontent.com/snapotter-hq/SnapOtter/main/branding/dashboard.png
+  - https://raw.githubusercontent.com/snapotter-hq/SnapOtter/main/branding/social-preview.png
+releaseNotes: >-
+  Initial SnapOtter app listing for the Namstore community app store.
+dependencies: []
+path: ""
+defaultUsername: admin
+defaultPassword: admin

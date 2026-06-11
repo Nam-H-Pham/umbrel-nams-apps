@@ -1,0 +1,15 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-snapotter_snapotter_1
+      APP_PORT: 1349
+    depends_on:
+      - snapotter
+
+  snapotter:
+    image: snapotter/snapotter:latest
+    restart: unless-stopped
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+    environment:
+      ANALYTICS_ENABLED: "false"
