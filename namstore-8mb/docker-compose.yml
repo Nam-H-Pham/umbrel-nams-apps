@@ -3,8 +3,10 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: namstore-8mb_web_1
-      APP_PORT: 3007
+      APP_HOST: web
+      APP_PORT: 3000
+    depends_on:
+      - web
 
   web:
     build:

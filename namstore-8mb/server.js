@@ -56,7 +56,14 @@ function compressVideo(inputPath, outputPath, targetMb, audioKbps) {
       const targetBits = targetMb * 1024 * 1024 * 8;
       const audioBitrate = Math.max(32, Number(audioKbps || 96));
       const safetyRatio = 0.94;
-      const videoKbps = Math.max(100, Math.floor((targetBits / duration / 1000 - audioBitrate) * safetyRatio));
+      const availableKbps = targetBits / duration / 1000 - audioBitrate;
+      const videoKbps = Math.floor(availableKbps * safetyRatio);
+
+      if (videoKbps < 100) {
+        throw new Error(
+          "Target size is too small for this video's duration and audio bitrate. Try a larger target or lower audio bitrate.",
+        );
+      }
 
       ffmpeg(inputPath)
         .outputOptions([

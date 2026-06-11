@@ -3,7 +3,7 @@ id: namstore-8mb
 name: 8mb.local
 tagline: Compress videos to a target file size locally
 category: media
-version: "1.0.0"
+version: "1.0.1"
 port: 3000
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-8mb/icon.svg
 description: >-
@@ -18,7 +18,8 @@ repo: https://github.com/Nam-H-Pham/umbrel-nams-apps
 support: https://github.com/Nam-H-Pham/umbrel-nams-apps/issues
 gallery: []
 releaseNotes: >-
-  Initial release with local upload, target-size compression, and download support.
+  Fix Umbrel proxy routing, Docker build setup, and clearer handling for target
+  sizes that are too small for the uploaded video.
 dependencies: []
 path: ""
 defaultUsername: ""
