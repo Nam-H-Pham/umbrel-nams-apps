@@ -4,7 +4,7 @@ name: Upsnap
 tagline: Wake-on-LAN dashboard with device discovery and remote power control
 icon: https://raw.githubusercontent.com/seriousm4x/UpSnap/master/frontend/static/gopher.svg
 category: Utilities
-version: "1.0.0"
+version: "1.0.1"
 port: 8090
 description: >-
   Upsnap is a Wake-on-LAN web app that discovers devices on your local network,
