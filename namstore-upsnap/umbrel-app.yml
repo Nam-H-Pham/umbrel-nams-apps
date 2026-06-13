@@ -24,5 +24,3 @@ releaseNotes: >-
   Initial Upsnap app listing for the Namstore community app store.
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
