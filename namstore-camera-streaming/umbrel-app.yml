@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: namstore-camera-streaming
+name: Camera Streaming
+category: automation
+version: "1.0.0"
+tagline: Neolink and go2rtc bundled for Reolink E321
+description: >-
+  A bundled camera streaming stack for Reolink cameras. Neolink connects to the
+  camera and exposes an internal RTSP stream. go2rtc then restreams it for Home
+  Assistant using RTSP, WebRTC, MJPEG, and JPEG snapshot endpoints.
+developer: Nam Pham
+website: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/Nam-H-Pham/umbrel-nams-apps
+support: https://github.com/Nam-H-Pham/umbrel-nams-apps/issues
+port: 1984
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  Initial safe combined Neolink + go2rtc app. Edit the generated local config file after install.
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+deterministicPassword: false
+torOnly: false
+dependencies: []
