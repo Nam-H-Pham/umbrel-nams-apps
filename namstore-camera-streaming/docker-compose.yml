@@ -1,0 +1,74 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-camera-streaming_go2rtc_1
+      APP_PORT: 1984
+      PROXY_AUTH_ADD: "false"
+
+  init:
+    image: busybox:1.36
+    restart: "no"
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+    command: |-
+      sh -c 'mkdir -p /config && if [ ! -f /config/neolink.toml ]; then cat > /config/neolink.toml <<"EOF"
+      bind = "0.0.0.0"
+      bind_port = 8554
+
+      [[cameras]]
+      name = "e321"
+      username = "CAMERA_USERNAME_PLACEHOLDER"
+      password = "CAMERA_PASSWORD_PLACEHOLDER"
+      address = "CAMERA_ADDRESS_PLACEHOLDER:9000"
+      stream = "subStream"
+      timeout = { secs = 5, nanos = 0 }
+      EOF
+      fi
+      if [ ! -f /config/go2rtc.yaml ]; then cat > /config/go2rtc.yaml <<"EOF"
+      streams:
+        e321:
+          - "rtsp://neolink:8554/e321/Substream"
+
+      preload:
+        e321: "video"
+
+      api:
+        listen: ":1984"
+
+      rtsp:
+        listen: ":8554"
+
+      webrtc:
+        listen: ":8555"
+      EOF
+      fi'
+
+  neolink:
+    image: quantumentangledandy/neolink:latest
+    restart: unless-stopped
+    depends_on:
+      init:
+        condition: service_completed_successfully
+    volumes:
+      - ${APP_DATA_DIR}/data/neolink.toml:/etc/neolink.toml:ro
+    command: ["rtsp", "--config", "/etc/neolink.toml"]
+    expose:
+      - "8554"
+
+  go2rtc:
+    image: alexxit/go2rtc:latest
+    restart: unless-stopped
+    depends_on:
+      - neolink
+    init: true
+    volumes:
+      - ${APP_DATA_DIR}/data/go2rtc.yaml:/config/go2rtc.yaml:ro
+    ports:
+      - "1984:1984"
+      - "8554:8554"
+      - "8555:8555/tcp"
+      - "8555:8555/udp"
+    environment:
+      - TZ=${TZ}
