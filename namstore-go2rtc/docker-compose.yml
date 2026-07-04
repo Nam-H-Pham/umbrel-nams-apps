@@ -1,0 +1,13 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-go2rtc_server_1
+      APP_PORT: 1984
+
+  server:
+    image: alexxit/go2rtc:latest
+    restart: unless-stopped
+    volumes:
+      - /data:/config
+    ports:
+      - "1985:1984"
