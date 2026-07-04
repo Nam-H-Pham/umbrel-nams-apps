@@ -1,0 +1,15 @@
+streams:
+  e321:
+    - "rtsp://192.168.1.69:8554/e321/Substream"
+
+preload:
+  e321: "video"
+  
+api:
+  listen: ":1984"
+
+rtsp:
+  listen: ":8554"
+
+webrtc:
+  listen: ":8555"
