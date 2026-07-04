@@ -29,7 +29,7 @@ services:
       if [ ! -f /config/go2rtc.yaml ]; then cat > /config/go2rtc.yaml <<"EOF"
       streams:
         e321:
-          - "rtsp://neolink:8554/e321/Substream"
+          - "rtsp://namstore-camera-streaming_neolink_1:8554/e321/Substream"
 
       preload:
         e321: "video"
@@ -53,7 +53,7 @@ services:
         condition: service_completed_successfully
     volumes:
       - ${APP_DATA_DIR}/data/neolink.toml:/etc/neolink.toml:ro
-    command: ["rtsp", "--config", "/etc/neolink.toml"]
+    command: ["neolink", "rtsp", "--config", "/etc/neolink.toml"]
     expose:
       - "8554"
 
@@ -72,3 +72,4 @@ services:
       - "8555:8555/udp"
     environment:
       - TZ=${TZ}
+      - TINI_SUBREAPER=true
