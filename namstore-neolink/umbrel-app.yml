@@ -1,0 +1,19 @@
+manifestVersion: 1
+id: namstore-neolink
+name: Neolink
+category: networking
+version: "0.6.2"
+tagline: RTSP bridge for Reolink cameras
+description: >-
+  Neolink creates RTSP streams for local camera software.
+developer: QuantumEntangledAndy
+website: https://github.com/QuantumEntangledAndy/neolink
+repo: https://github.com/QuantumEntangledAndy/neolink
+support: https://github.com/QuantumEntangledAndy/neolink/issues
+port: 80
+gallery: []
+path: ""
+releaseNotes: >-
+  Restored separate Neolink app.
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
