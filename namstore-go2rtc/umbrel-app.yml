@@ -1,0 +1,24 @@
+manifestVersion: 1
+id: namstore-go2rtc
+name: go2rtc
+tagline: Ultimate camera streaming proxy
+category: automation
+version: "latest"
+port: 1984
+description: >-
+  go2rtc is a lightweight camera streaming proxy for Home Assistant camera dashboards.
+developer: AlexxIT
+website: https://github.com/AlexxIT/go2rtc
+repo: https://github.com/AlexxIT/go2rtc
+support: https://github.com/AlexxIT/go2rtc/issues
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+releaseNotes: >-
+  Restored separate go2rtc app.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+gallery: []
+deterministicPassword: false
+torOnly: false
