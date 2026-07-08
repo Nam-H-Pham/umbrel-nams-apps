@@ -4,6 +4,7 @@ name: Neolink
 category: networking
 version: "0.6.2"
 tagline: RTSP bridge for Reolink cameras
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/neolink.svg
 description: >-
   Neolink creates RTSP streams for local camera software.
 developer: QuantumEntangledAndy
