@@ -2,6 +2,7 @@ manifestVersion: 1
 id: namstore-go2rtc
 name: go2rtc
 tagline: Ultimate camera streaming proxy
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/go2rtc.svg
 category: automation
 version: "latest"
 port: 1984
