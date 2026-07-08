@@ -3,11 +3,28 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: namstore-kasm_kasm_1
-      APP_PORT: 3000
+      APP_HOST: namstore-kasm_redirect_1
+      APP_PORT: 8080
       PROXY_AUTH_ADD: "false"
     depends_on:
+      - redirect
       - kasm
+
+  redirect:
+    image: nginx:alpine
+    container_name: namstore-kasm_redirect_1
+    restart: unless-stopped
+    command: >-
+      /bin/sh -c "cat > /etc/nginx/conf.d/default.conf <<'EOF'
+      server {
+        listen 8080;
+        server_name _;
+        location / {
+          return 302 https://$$host:4443$$request_uri;
+        }
+      }
+      EOF
+      nginx -g 'daemon off;'"
 
   kasm:
     image: lscr.io/linuxserver/kasm:latest
