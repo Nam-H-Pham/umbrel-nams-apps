@@ -20,10 +20,8 @@ repo: https://github.com/linuxserver/docker-kasm
 support: https://github.com/linuxserver/docker-kasm/issues
 gallery: []
 releaseNotes: >-
-  Initial Namstore package for Kasm Workspaces. Open the setup wizard directly on
-  https://homeos:33000, then use the main Kasm interface on https://homeos:4443.
-  The Umbrel app tile may not proxy Kasm correctly because Kasm serves HTTPS with
-  a self-signed certificate.
+  The Umbrel app tile now redirects to Kasm's HTTPS interface on
+  https://homeos:4443. For first-time setup, open https://homeos:33000 directly.
 dependencies: []
 path: ""
 defaultUsername: "admin@kasm.local"
