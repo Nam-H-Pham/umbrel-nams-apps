@@ -4,7 +4,7 @@ name: Kasm Workspaces
 tagline: Browser-based desktops and app workspaces
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/kasm.svg
 category: Developer Tools
-version: "1.18.1"
+version: "1.19.0"
 port: 3000
 description: >-
   Kasm Workspaces provides browser-based access to disposable desktops,
