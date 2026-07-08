@@ -25,5 +25,8 @@ services:
       - ${APP_DATA_DIR}/data:/opt
       - ${APP_DATA_DIR}/profiles:/profiles
     ports:
-      - "3000:3000"
+      # Kasm's first-run installer listens on HTTPS port 3000 inside the container.
+      # Use a higher host port to avoid clashing with other apps that commonly bind 3000.
+      - "33000:3000"
+      # KASM_PORT must match both the container port and host port for the main UI.
       - "4443:4443"
