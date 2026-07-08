@@ -4,6 +4,7 @@ name: Camera Streaming
 category: automation
 version: "1.0.0"
 tagline: Neolink and go2rtc bundled for Reolink E321
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/camera-streaming.svg
 description: >-
   A bundled camera streaming stack for Reolink cameras. Neolink connects to the
   camera and exposes an internal RTSP stream. go2rtc then restreams it for Home
