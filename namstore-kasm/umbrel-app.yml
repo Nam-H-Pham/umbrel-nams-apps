@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: namstore-kasm
+name: Kasm Workspaces
+tagline: Browser-based desktops and app workspaces
+icon: https://www.kasmweb.com/hubfs/favicon-32x32.png
+category: Developer Tools
+version: "1.18.1"
+port: 3000
+description: >-
+  Kasm Workspaces provides browser-based access to disposable desktops,
+  applications, and web services using containerised desktop infrastructure.
+  This app uses the LinuxServer.io Kasm container and requires privileged
+  Docker-in-Docker access.
+
+developer: Kasm Technologies
+website: https://www.kasmweb.com/
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/linuxserver/docker-kasm
+support: https://github.com/linuxserver/docker-kasm/issues
+gallery: []
+releaseNotes: >-
+  Initial Namstore package for Kasm Workspaces. Open the setup wizard on
+  https://homeos:3000, then use the main Kasm interface on https://homeos:4443.
+dependencies: []
+path: ""
+defaultUsername: "admin@kasm.local"
+defaultPassword: ""
