@@ -2,7 +2,7 @@ manifestVersion: 1
 id: namstore-kasm
 name: Kasm Workspaces
 tagline: Browser-based desktops and app workspaces
-icon: https://www.kasmweb.com/hubfs/favicon-32x32.png
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/kasm.svg
 category: Developer Tools
 version: "1.18.1"
 port: 3000
