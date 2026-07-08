@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-kasm_kasm_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+    depends_on:
+      - kasm
+
+  kasm:
+    image: lscr.io/linuxserver/kasm:latest
+    container_name: namstore-kasm_kasm_1
+    privileged: true
+    security_opt:
+      - apparmor:rootlesskit
+    restart: unless-stopped
+    stop_grace_period: 90s
+    environment:
+      - KASM_PORT=4443
+      - DOCKER_MTU=1500
+      - TZ=${TZ}
+    volumes:
+      - ${APP_DATA_DIR}/data:/opt
+      - ${APP_DATA_DIR}/profiles:/profiles
+    ports:
+      - "3000:3000"
+      - "4443:4443"
