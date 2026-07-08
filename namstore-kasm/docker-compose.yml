@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-kasm_kasm_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+    depends_on:
+      - kasm
+
+  kasm:
+    image: lscr.io/linuxserver/kasm:latest
+    container_name: namstore-kasm_kasm_1
+    privileged: true
+    security_opt:
+      - apparmor:rootlesskit
+    restart: unless-stopped
+    stop_grace_period: 90s
+    environment:
+      - KASM_PORT=4443
+      - DOCKER_MTU=1500
+      - TZ=${TZ}
+    volumes:
+      - ${APP_DATA_DIR}/data:/opt
+      - ${APP_DATA_DIR}/profiles:/profiles
+    ports:
+      # Kasm's first-run installer listens on HTTPS port 3000 inside the container.
+      # Use a higher host port to avoid clashing with other apps that commonly bind 3000.
+      - "33000:3000"
+      # KASM_PORT must match both the container port and host port for the main UI.
+      - "4443:4443"
