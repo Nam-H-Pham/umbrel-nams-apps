@@ -4,13 +4,17 @@ name: Kasm Workspaces
 tagline: Browser-based desktops and app workspaces
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/kasm.svg
 category: Developer Tools
-version: "1.19.1"
+version: "1.19.2"
 port: 3000
 description: >-
   Kasm Workspaces provides browser-based access to disposable desktops,
   applications, and web services using containerised desktop infrastructure.
-  This app uses the LinuxServer.io Kasm container and requires privileged
-  Docker-in-Docker access.
+  After installing, open https://homeos:33000 directly for the first-time setup
+  wizard and accept the self-signed certificate warning. Once setup is complete,
+  start and use Kasm from https://homeos:4443. The Umbrel app tile redirects to
+  this HTTPS interface, but direct access is recommended if your browser blocks
+  the redirect or certificate warning. This app uses the LinuxServer.io Kasm
+  container and requires privileged Docker-in-Docker access.
 
 developer: Kasm Technologies
 website: https://www.kasmweb.com/
@@ -20,9 +24,8 @@ repo: https://github.com/linuxserver/docker-kasm
 support: https://github.com/linuxserver/docker-kasm/issues
 gallery: []
 releaseNotes: >-
-  Fix the Umbrel redirect container so the app tile correctly forwards to
-  Kasm's HTTPS interface on https://homeos:4443. For first-time setup, open
-  https://homeos:33000 directly.
+  Add startup instructions to the store listing. First-time setup is available at
+  https://homeos:33000 and the main Kasm interface runs at https://homeos:4443.
 dependencies: []
 path: ""
 defaultUsername: "admin@kasm.local"
