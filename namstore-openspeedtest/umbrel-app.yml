@@ -2,10 +2,10 @@ manifestVersion: 1
 id: namstore-openspeedtest
 name: OpenSpeedTest
 tagline: Self-hosted HTML5 network speed test
-icon: https://raw.githubusercontent.com/openspeedtest/Speed-Test/master/images/icons/android-chrome-512x512.png
+icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/icons/openspeedtest.svg
 category: Networking
-version: "1.0.0"
-port: 3000
+version: "1.0.1"
+port: 3020
 description: >-
   OpenSpeedTest is a lightweight, self-hosted HTML5 speed test server for
   measuring download, upload, latency, and jitter from devices on your network.
@@ -19,7 +19,9 @@ repo: https://github.com/openspeedtest/Docker-Image
 support: https://github.com/openspeedtest/Docker-Image/issues
 gallery: []
 releaseNotes: >-
-  Initial OpenSpeedTest app using the official openspeedtest/latest Docker image.
+  Use a local SVG icon from the Namstore repository and move the Umbrel-facing
+  proxy port to 3020 to avoid common port conflicts. OpenSpeedTest still runs
+  internally on its default container port 3000.
 dependencies: []
 path: ""
 defaultUsername: ""
