@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: namstore-openspeedtest
+name: OpenSpeedTest
+tagline: Self-hosted HTML5 network speed test
+icon: https://raw.githubusercontent.com/openspeedtest/Speed-Test/master/images/icons/android-chrome-512x512.png
+category: Networking
+version: "1.0.0"
+port: 3000
+description: >-
+  OpenSpeedTest is a lightweight, self-hosted HTML5 speed test server for
+  measuring download, upload, latency, and jitter from devices on your network.
+  It runs entirely in the browser and does not require client-side plugins.
+
+developer: OpenSpeedTest
+website: https://openspeedtest.com/
+submitter: Nam Pham
+submission: https://github.com/Nam-H-Pham/umbrel-nams-apps
+repo: https://github.com/openspeedtest/Docker-Image
+support: https://github.com/openspeedtest/Docker-Image/issues
+gallery: []
+releaseNotes: >-
+  Initial OpenSpeedTest app using the official openspeedtest/latest Docker image.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
