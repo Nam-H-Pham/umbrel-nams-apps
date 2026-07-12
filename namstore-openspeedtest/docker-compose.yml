@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: namstore-openspeedtest_web_1
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+    depends_on:
+      - web
+
+  web:
+    image: openspeedtest/latest
+    container_name: namstore-openspeedtest_web_1
+    restart: unless-stopped
