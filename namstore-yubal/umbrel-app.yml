@@ -2,17 +2,16 @@ manifestVersion: 1
 
 id: namstore-yubal
 name: Yubal
-tagline: Simple background downloader and scheduler for Yubal content
+tagline: Simple background downloader and scheduler for YouTube content
 icon: https://raw.githubusercontent.com/Nam-H-Pham/umbrel-nams-apps/master/namstore-yubal/icon.svg
 category: Utilities
-version: "2.0.0"
+version: "2.0.1"
 port: 8473
 description: >-
-  Yubal provides a scheduled content downloader and management UI on port 8473.
+  Yubal is a self-hosted YouTube downloader and scheduler with a web interface.
 
-  This Namstore package runs Yubal with persistent data and config volumes inside
-  the app data directory.
-
+  Downloads and configuration are stored persistently in the Umbrel app data
+  directory and the interface is routed through Umbrel's app proxy.
 developer: guillevc
 website: https://github.com/guillevc/yubal
 submitter: Nam Pham
@@ -21,7 +20,7 @@ repo: https://github.com/guillevc/yubal
 support: https://github.com/guillevc/yubal/issues
 gallery: []
 releaseNotes: >-
-  Initial Namstore package for Yubal with scheduled downloads and persistent
-  configuration.
+  Route Yubal through Umbrel's app proxy and move downloads and configuration
+  into the standard persistent app data directory.
 dependencies: []
 path: ""
