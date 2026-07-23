@@ -3,16 +3,16 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      PORT: 3000
-      APP_HOST: 127.0.0.1
+      APP_HOST: host.docker.internal
       APP_PORT: 28766
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       - upsnap
 
   upsnap:
     image: ghcr.io/seriousm4x/upsnap:5
     init: true
-    container_name: namstore-upsnap_upsnap_1
     restart: unless-stopped
     network_mode: host
     cap_add:
@@ -20,4 +20,4 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/app/pb_data
     environment:
-      - UPSNAP_HTTP_LISTEN=0.0.0.0:28766
+      UPSNAP_HTTP_LISTEN: 0.0.0.0:28766

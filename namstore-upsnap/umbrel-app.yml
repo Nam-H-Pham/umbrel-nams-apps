@@ -4,7 +4,7 @@ name: Upsnap
 tagline: Wake-on-LAN dashboard with device discovery and remote power control
 icon: https://raw.githubusercontent.com/seriousm4x/UpSnap/master/frontend/static/gopher.svg
 category: Utilities
-version: "1.0.9"
+version: "1.0.10"
 port: 28765
 description: >-
   Upsnap is a Wake-on-LAN web app that discovers devices on your local network,
@@ -21,7 +21,8 @@ gallery:
   - https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/new-scan-light.webp
   - https://raw.githubusercontent.com/seriousm4x/UpSnap/master/assets/settings-light.webp
 releaseNotes: >-
-  Fix startup by separating the Umbrel proxy port (28765) from the Upsnap backend port (28766).
+  Fix the Umbrel proxy connection by routing it to the host-networked UpSnap
+  service through Docker's host gateway while keeping the backend on port 28766.
 dependencies: []
 path: ""
 defaultUsername: ""
